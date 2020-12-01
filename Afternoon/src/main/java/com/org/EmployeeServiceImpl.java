@@ -4,13 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
-	private EmployeeDao dao;
+	private EmployeeDao employeeDao;
+
 
 	public void storeEmployee(Employee emp) {
-		dao.store(emp);
+		
+		employeeDao.store(emp);
 	}
+    
+	
 
 }

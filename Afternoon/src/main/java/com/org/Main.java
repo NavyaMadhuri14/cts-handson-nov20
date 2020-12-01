@@ -1,3 +1,4 @@
+
 package com.org;
 
 import org.springframework.context.ApplicationContext;
@@ -7,11 +8,11 @@ public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		
-		EmployeeService service = (EmployeeService) context.getBean("employeeService");
+		EmployeeServiceImpl service = (EmployeeServiceImpl) context.getBean("employeeService");
 		Employee emp = new Employee();
-		emp.setId(101);
-		emp.setName("Bruce");
-		emp.setSalary(55000);
+		emp.setId(102);
+		emp.setName("Candy");
+		emp.setSalary(56000);
 		service.storeEmployee(emp);
 	}
 }
